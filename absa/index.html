@@ -1,0 +1,484 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://howardhsu.github.io/article/absa/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Aspect-based Sentiment Analysis - Research Articles</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,700|Nunito+Mono">
+        <style>body,input{font-family:"Nunito","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Nunito Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-138497825-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#aspect-based-sentiment-analysis" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://howardhsu.github.io/article" title="Research Articles" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">sentiment_satisfied</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Research Articles
+            </span>
+            <span class="md-header-nav__topic">
+              Aspect-based Sentiment Analysis
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://howardhsu.github.io/article" title="Research Articles" class="md-nav__button md-logo">
+      
+        <i class="md-icon">sentiment_satisfied</i>
+      
+    </a>
+    Research Articles
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Front Page" class="md-nav__link">
+      Front Page
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../gen/" title="Data-intensive Generalization" class="md-nav__link">
+      Data-intensive Generalization
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tdrl/" title="Task and Domain Representation Learning" class="md-nav__link">
+      Task and Domain Representation Learning
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../owl/" title="Open-world Learning" class="md-nav__link">
+      Open-world Learning
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Aspect-based Sentiment Analysis
+      </label>
+    
+    <a href="./" title="Aspect-based Sentiment Analysis" class="md-nav__link md-nav__link--active">
+      Aspect-based Sentiment Analysis
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aspect-extraction" title="Aspect Extraction" class="md-nav__link">
+    Aspect Extraction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspect-sentiment-classification" title="Aspect Sentiment Classification" class="md-nav__link">
+    Aspect Sentiment Classification
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../pub/" title="Publication" class="md-nav__link">
+      Publication
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aspect-extraction" title="Aspect Extraction" class="md-nav__link">
+    Aspect Extraction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspect-sentiment-classification" title="Aspect Sentiment Classification" class="md-nav__link">
+    Aspect Sentiment Classification
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="aspect-based-sentiment-analysis">Aspect-based Sentiment Analysis</h1>
+<p>Although a rating can summarize a whole review, it is really the vast amount of finer details matters a lot. After all, each person's need is quite different and we wish a personalized fit of a product (or service) to our own needs.</p>
+<p>Aspect-based sentiment analysis (ABSA) aims to find fine-grained opinions from reviews. For example, in a <strong>Laptop</strong> domain, we may wish to see whether the <strong>screen</strong>, <strong>keyboard</strong>, etc. are good or not. Although there are unlimited amount of reviews with coarse-grained ratings, ABSA severely lacks supervision from humans (e.g., in the form of annotated data). 
+The above ABSA problem can be decomposed into two important sub-tasks: aspect extraction (AE) and aspect sentiment classification (ASC).</p>
+<h2 id="aspect-extraction">Aspect Extraction</h2>
+<p>Given a review sentence, such as <strong>The retina display is beautiful.</strong>, AE aims to find aspects <strong>retina display</strong>. In DL, it is mostly formalized as a sequence labeling problem: label "The retina display is great ." as "O B I O O O" so to extract "retina display" as an aspect. Obviously, the context of an aspect is important and an AI agent needs to have enough domain knowledge to support such extraction, such as <em>A beautiful thing in Laptop could be an aspect.</em> However, counting on the strong supervision from humans aspects-by-aspects for a particular domain is impossible.
+We show that a simple <a href="http://aclweb.org/anthology/P18-2094">domain word embedding</a> can boost the performance. More ideally, a language model can boost it <a href="http://arxiv.org/abs/1904.02232">further</a> as whenever you see some aspects dropped, LM really encouraging the context words to recover that aspects.</p>
+<h2 id="aspect-sentiment-classification">Aspect Sentiment Classification</h2>
+<p>Given an aspect <strong>retina display</strong> and a review sentence <strong>The retina display is great.</strong>, ASC detects the polarity of that aspect <em>positive</em>. One challenge of ASC is to detect the polarity of opinion expressions and there could be unlimited amount of such expressions to annotate. Again language model can <a href="http://arxiv.org/abs/1904.02232">help</a> this too as human tends to repeat their opinions in their writing so knowing one opinion may help to automatically understand the other. For example, in <em>Terrible product. It could be the last thing I may consider to buy</em>, we may infer the harder opinion of the second sentence from <em>Terrible</em> in the first one so to automatically learn unlimited expressions like that.</p>
+                
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://howardhsu.github.io/article/absa/";
+      this.page.identifier =
+        "/absa/";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//howardhsu.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../owl/" title="Open-world Learning" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Open-world Learning
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../pub/" title="Publication" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Publication
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Hu Xu(activebus@gmail.com). Please cite this website for any purpose of use these articles.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
